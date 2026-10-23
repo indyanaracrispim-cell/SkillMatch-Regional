@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillMatch Regional - Plataforma de Triagem</title>
+  <link rel="stylesheet" href="./assets/css/estilo.css">
+</head>
+<body>
+
+  <header style="text-align: center; padding: 20px 10px;">
+    <h1>⚡ Skill<span style="font-weight: 300; opacity: 0.9;">Match</span> <strong style="font-size: 0.55em; background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 10px; vertical-align: middle;">Regional</strong></h1>
+    <p>Plataforma de Triagem e Alinhamento Regional de Vagas</p>
+  </header>
+
+  <main>
+    <!-- FORMULÁRIO DE CADASTRO DO PERFIL -->
+    <section class="container-formulario">
+      <h2>Perfil Profissional</h2>
+      <form id="form-perfil">
+        
+        <!-- NOME COMPLETO -->
+        <section class="campo-grupo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required placeholder="Ex: Ana Silva">
+        </section>
+
+        <!-- SELEÇÃO DE ESTADO (REGIONAL - RF17) -->
+        <section class="campo-grupo">
+          <label for="estado">Estado onde mora (UF):</label>
+          <select id="estado" name="estado" required>
+            <option value="">Selecione seu estado...</option>
+            <option value="SC" selected>Santa Catarina (SC)</option>
+            <option value="PR">Paraná (PR)</option>
+            <option value="RS">Rio Grande do Sul (RS)</option>
+            <option value="SP">São Paulo (SP)</option>
+            <option value="RJ">Rio de Janeiro (RJ)</option>
+            <option value="MG">Minas Gerais (MG)</option>
+          </select>
+        </section>
+
+        <!-- CHECKBOX PARA INCLUIR VAGAS REMOTAS DE OUTROS ESTADOS -->
+        <section class="campo-grupo" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+          <input type="checkbox" id="incluirRemotas" name="incluirRemotas" checked style="width: auto;">
+          <label for="incluirRemotas" style="font-weight: normal; font-size: 0.9rem; margin-bottom: 0;">
+            Incluir vagas Remotas de outros estados
+          </label>
+        </section>
+
+        <!-- SELEÇÃO DE HABILIDADES VIA CHECKBOXES (SEM DIV - USANDO UL / LI SEMÂNTICO) -->
+        <fieldset class="campo-grupo" style="border: 1px solid #cbd5e0; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+          <legend style="font-weight: 600; padding: 0 0.5rem;">Suas Habilidades Técnicas (Marque ao menos 2):</legend>
+          
+          <ul style="list-style: none; padding: 0; margin: 0.5rem 0 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.5rem;">
+            <li><label><input type="checkbox" name="habilidades" value="HTML"> HTML</label></li>
+            <li><label><input type="checkbox" name="habilidades" value="CSS"> CSS</label></li>
+            <li><label><input type="checkbox" name="habilidades" value="JavaScript"> JavaScript</label></li>
+            <li><label><input type="checkbox" name="habilidades" value="React"> React</label></li>
+            <li><label><input type="checkbox" name="habilidades" value="GitHub"> GitHub</label></li>
+            <li><label><input type="checkbox" name="habilidades" value="Node.js"> Node.js</label></li>
+            <li><label><input type="checkbox" name="habilidades" value="SQL"> SQL</label></li>
+            <li><label><input type="checkbox" name="habilidades" value="Python"> Python</label></li>
+          </ul>
+        </fieldset>
+
+        <!-- MENSAGEM DE ERRO ACESSÍVEL -->
+        <p id="mensagem-erro" aria-live="polite" style="color: #e53e3e; font-weight: 600; margin-top: 0.5rem; text-align: center; min-height: 1.2em;"></p>
+
+        <!-- BOTOES -->
+        <section style="display: flex; gap: 1rem; margin-top: 1rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+          <button type="submit" id="btnSalvar" style="flex: 3; padding: 10px; cursor: pointer;">Salvar Perfil e Analisar</button>
+          <button type="button" id="btnLimpar" style="flex: 1.5; padding: 10px; background-color: #5b5e63; cursor: pointer;">Limpar</button>
+        </section>
+
+      </form>
+    </section>
+
+    <!-- ÁREA DE STATUS DA API E AUDITORIA -->
+    <section class="container-status">
+      <span class="status" id="status">Aguardando preenchimento do perfil...</span>
+    </section>
+
+    <!-- PAINEL DE RESULTADOS -->
+    <section id="resultados"></section>
+  </main>
+
+  <!-- CAMINHO CORRETO DO JS CONFORME SUA PASTA -->
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

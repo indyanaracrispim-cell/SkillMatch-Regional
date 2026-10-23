@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "empresa": "TechStart Saúde",
+    "cargo": "Dev Front-End Junior",
+    "requisitos": ["JavaScript", "GitHub", "Logica de Programacao", "React"],
+    "salario": 3200,
+    "modalidade": "Remoto",
+    "estado": "SP",
+    "abrangencia": "Nacional"
+  },
+  {
+    "id": 2,
+    "empresa": "CodeLab Blumenau",
+    "cargo": "Estagio Front-End",
+    "requisitos": ["JavaScript", "Kanban", "GitHub", "CSS Avancado", "Figma"],
+    "salario": 1800,
+    "modalidade": "Hibrido",
+    "estado": "SC"
+  },
+  {
+    "id": 3,
+    "empresa": "WebSolutions Hospitais",
+    "cargo": "Programador JavaScript",
+    "requisitos": ["JavaScript", "Arrays", "Objetos", "Funcoes", "GitHub", "TypeScript"],
+    "salario": 4500,
+    "modalidade": "Presencial",
+    "estado": "SC"
+  },
+  {
+    "id": 4,
+    "empresa": "InovaDev Vital",
+    "cargo": "Front-End Developer I",
+    "requisitos": ["JavaScript", "React", "Jest", "TypeScript", "APIs REST"],
+    "salario": 4200,
+    "modalidade": "Remoto",
+    "estado": "PR",
+    "abrangencia": "Sul"
+  }
+]
